@@ -1,6 +1,8 @@
 import os
 import asyncio 
 
+from svgScissors import client
+
 async def createArtFileOfPiece(game, gameCompose, componentCompose, componentGamedata, pieceGamedata, artMetaData, outputDirectory):
     if game == None:
         print("game cannot be None.")
@@ -37,6 +39,5 @@ async def createArtFileOfPiece(game, gameCompose, componentCompose, componentGam
     
     await textReplaceInFile(artFileOutputFilepath, artMetaData["textReplacements"], game, componentGamedata, pieceGamedata)
     await updateStylesInFile(artFileOutputFilepath, artMetaData["styleUpdates"], game, componentGamedata, pieceGamedata)
-
     await exportSvgToJpg(artFileOutputFilepath, artFileOutputName, outputDirectory)
     print("Produced %s." % (pieceGamedata["name"]))

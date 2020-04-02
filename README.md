@@ -1,3 +1,3 @@
-# Game Crafter Client
+# SVG Scissors
 
-API client for the game crafter.
+Manipulate svg xml to automate data insertion.
