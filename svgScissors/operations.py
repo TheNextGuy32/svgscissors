@@ -32,12 +32,12 @@ async def createArtFileOfPiece(game, gameCompose, componentCompose, componentGam
     artFilename = "%s.svg" % (artMetaData["templateFilename"])
     artFile = Element(os.path.join(templateFilesDirectory, artFilename)) 
 
-    await addOverlays(artFile, artMetaData["overlays"], game, gameCompose, componentGamedata, pieceGamedata)
+    await client.addOverlays(artFile, artMetaData["overlays"], game, gameCompose, componentGamedata, pieceGamedata)
 
     artFileOutputName = ("%s-%s" % (componentCompose["name"], pieceGamedata["name"]))
-    artFileOutputFilepath = await createArtfile(artFile, artFileOutputName, outputDirectory)
+    artFileOutputFilepath = await client.createArtfile(artFile, artFileOutputName, outputDirectory)
     
-    await textReplaceInFile(artFileOutputFilepath, artMetaData["textReplacements"], game, componentGamedata, pieceGamedata)
-    await updateStylesInFile(artFileOutputFilepath, artMetaData["styleUpdates"], game, componentGamedata, pieceGamedata)
-    await exportSvgToJpg(artFileOutputFilepath, artFileOutputName, outputDirectory)
+    await client.textReplaceInFile(artFileOutputFilepath, artMetaData["textReplacements"], game, componentGamedata, pieceGamedata)
+    await client.updateStylesInFile(artFileOutputFilepath, artMetaData["styleUpdates"], game, componentGamedata, pieceGamedata)
+    await client.exportSvgToJpg(artFileOutputFilepath, artFileOutputName, outputDirectory)
     print("Produced %s." % (pieceGamedata["name"]))
