@@ -5,7 +5,7 @@ import xml.etree.ElementTree as ET
 from wand.image import Image
 from aiofile import AIOFile
 from cairosvg import svg2png
-from templative.lib.svgScissors.element import Element
+from svgScissors.element import Element
 
 
 async def createArtfile(artFile, artFileOutputName, outputDirectory):
