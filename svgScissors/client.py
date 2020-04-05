@@ -180,7 +180,3 @@ async def exportSvgToJpg(filepath, name, outputDirectory):
         outputFilename = "%s.jpg" % (name)
         outputFilepath = os.path.join(outputDirectory, outputFilename)
         image.save(filename=outputFilepath)
-
-    # outputFilename = "%s.jpg" % (name)
-    # outputFilepath = os.path.join(outputDirectory, outputFilename)
-    # svg2png(file_obj=open(filepath,"rb"),write_to=outputFilepath)
