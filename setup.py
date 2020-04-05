@@ -2,11 +2,12 @@ from setuptools import setup, find_packages
 
 setup(
     name = "svgScissors",
-    version = "0.0.5",
+    version = "0.0.6",
     author = "Oliver Barnum",
     author_email = "oliverbarnum32@gmail.com",
     description = "Manipulate svg xml to automate data insertion.",
     url = "https://github.com/TheNextGuy32/svgScissors",
+    install_requires=["asyncio", "ensure", "svgutils", "wand", "mpmath"],
     download_url="https://github.com/TheNextGuy32/svgScissors/archive/0.0.4.tar.gz",
     classifiers=[
         "Programming Language :: Python :: 3.7",
