@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name = "svgScissors",
-    version = "0.0.7",
+    version = "0.0.8",
     author = "Oliver Barnum",
     author_email = "oliverbarnum32@gmail.com",
     description = "Manipulate svg xml to automate data insertion.",
