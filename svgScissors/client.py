@@ -4,7 +4,6 @@ import svgutils.transform as sg
 import xml.etree.ElementTree as ET
 from wand.image import Image
 from aiofile import AIOFile
-from cairosvg import svg2png
 
 from .element import Element
 
