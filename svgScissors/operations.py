@@ -1,7 +1,7 @@
 import os
 import asyncio 
-from svgScissors.element import Element
-from svgScissors import client
+from .element import Element
+from . import client
 
 async def createArtFileOfPiece(game, gameCompose, componentCompose, componentGamedata, pieceGamedata, artMetaData, outputDirectory):
     if game == None:

@@ -5,8 +5,8 @@ import xml.etree.ElementTree as ET
 from wand.image import Image
 from aiofile import AIOFile
 from cairosvg import svg2png
-from svgScissors.element import Element
 
+from .element import Element
 
 async def createArtfile(artFile, artFileOutputName, outputDirectory):
     

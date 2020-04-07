@@ -1,1 +1,1 @@
-from svgScissors.operations import *
+from .operations import *
